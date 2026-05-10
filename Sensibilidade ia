@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensi AI Gen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sensi <span class="highlight">AI</span> Generator</h1>
+        <p>Ajuste os parâmetros para calcular sua sensibilidade ideal.</p>
+        
+        <div class="input-group">
+            <label>DPI do Mouse/Celular</label>
+            <input type="number" id="dpi" placeholder="Ex: 800" value="800">
+        </div>
+
+        <div class="input-group">
+            <label>Largura da Tela (Pixels)</label>
+            <input type="number" id="resolucao" placeholder="Ex: 1080" value="1080">
+        </div>
+
+        <div class="input-group">
+            <label>Estilo de Jogo</label>
+            <select id="estilo">
+                <option value="0.8">Precisão (Low Sensi)</option>
+                <option value="1.0" selected>Equilibrado</option>
+                <option value="1.4">Velocidade (High Sensi)</option>
+            </select>
+        </div>
+
+        <button onclick="calcularSensi()">Gerar Sensibilidade</button>
+
+        <div id="resultado" class="result-area">
+            <p>Sua Sensi Ideal:</p>
+            <span id="valor-sensi">--</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
